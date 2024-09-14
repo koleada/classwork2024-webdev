@@ -1,0 +1,34 @@
+CI/CD: continous iteration and deployment. Automatically deploys once the new implementation passes your unit tests. 
+"Pipeline" - this pipline is responsible for the automatic deployment so users can access updates as soon as they are ready to deploy. 
+CI/CD systems - many systems are out there to do this. ex. jenkins.
+
+Github also offers various workflows for CI/CD - these are all located in the "Actions" tab. This will allows us to set up automatic unit
+testing and deployment. it also gives us the option to make our own workflows, these are written in yaml (a simple markup language often 
+used in config files)
+    - eventually we will have a custom workflow to compile node, minify CSS, and push to a certain hosting provider. 
+
+Deploying on github: very often we will deploy applications to two different locations and see how it works on both platforms.
+    1. pages -> already very familiar with pages and how it works 
+        - it does have an option to deploy from actions, specifcally where we normally do deploy from branch. If we want to use actions
+          offered by github, we can leverage this in our pages deployment.
+        - once we use the workflow, in the actions tab we can see all deployments and what specific actions ran during that deployment. 
+        - using even a simple, automatically generation action (such as the static html one) will allow us to set up automatic deployments to
+          pages whenever we push to the repo. 
+
+we will be pushing everything to render.com -> bookmarked -> be sure to log in with github account 
+
+render.com links with our git account and will also auto deploy when changes are made to the repo. they have their own hosting system outside
+of github pages. so this is an alternative to pages. we can test our development branches here for testing and push our main branch to pages.
+
+***********************************************
+All work done on a project should be done in a NEW BRANCH! Everything should be done in a seperate development branch and then merged with 
+the main branch after testing.
+
+how to create a new branch: 
+git checkout -b newbranchname -> creates a brand new branch, in vscode the branch will be shown in the bottom left corner 
+
+we can then switch between any existing branch by using "git checkout branchname" 
+
+all commits and pushes will be then done on the current working branch which we can see visually in github 
+
+in vscode left click on development branch in git tab and it will give us the option to merge it to main. 
