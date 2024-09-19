@@ -1,3 +1,5 @@
+These notes go over deployment to pages and render.com as well as branching 
+
 CI/CD: continous iteration and deployment. Automatically deploys once the new implementation passes your unit tests. 
 "Pipeline" - this pipline is responsible for the automatic deployment so users can access updates as soon as they are ready to deploy. 
 CI/CD systems - many systems are out there to do this. ex. jenkins.

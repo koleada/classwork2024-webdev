@@ -1,0 +1,10 @@
+Today we will learn about making dynamic pages with JS. These can still be easily deployed to pages because only the client side is dynamic.
+
+We will go over Vue for adding JS. 
+
+MCV - Model View Controller - many variations on the last word eg MVP p=presentation so we will often see MV* to denote the variations 
+Model = data, system/rules meaning what the system actually does at a high level eg. in a bank app u cant spend more than is in ur account. or a database
+Controller = outside actions, what actions users can take upon our model. controller the user input. eg apis to handle user data. 
+presentation = how our stuff is presented to the user. ex javascript running client side well be using Vue for this 
+
+Vue uses MVVM - Model View View Model 
