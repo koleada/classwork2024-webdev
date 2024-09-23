@@ -8,3 +8,10 @@ Controller = outside actions, what actions users can take upon our model. contro
 presentation = how our stuff is presented to the user. ex javascript running client side well be using Vue for this 
 
 Vue uses MVVM - Model View View Model 
+
+** always use Vue composition API 
+
+** also we should generally put script links at the bottom of our html
+
+**Vue is also a templating engine. It give us global variables and functions we can use in our code. & offers a templating lnaguage to be 
+used in our scripts as well. 

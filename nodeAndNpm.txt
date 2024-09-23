@@ -1,0 +1,63 @@
+NODE DAY 1:
+
+In vue anytime we use the ref([]]) keyword we can just refer to the variable we set to the ref.
+ex. const cart = ref([1, 2, 3]) //we would access as: cart.value.push...
+
+most of the value in an application is in the backend. this is how customer information and thus value is stored for a company. 
+
+
+-vue is front end "framework" we could instead use react (which is most popular) or angular
+-Node with the express framework is for backend instead of this we could use django, ruby on rails, asp.net, flask, go, php ... 
+
+We will need multiple different "computers" working together to create our full stack application. 
+    - we will need our database (postgres with supabase)
+    - we will need an API server/ webserver to handle user data, db interfacing etc for this well use node w/ express framework 
+    - we will also need our frontend well use vue for JavaScript    
+    - webservices - google contacts/drive GPT ... jsut stuff to make our app a bit cooler essentially just through accessing their APIs
+    - development machine aka our laptops. essentially our CI/CD. this is how our applications get deployed as covered in earlier notes
+
+Node - node just took the google chrome javascript vm and made it accessible off of the web. its essentially a way to run JS outside of the browser.
+
+very simple to use. make a .js file. node is installed in ubuntu already (super easy) then just do "node path/to/test.js" 
+essentially node is extremely similar to django which we are very familar with. we do have to "create" a server as shown in the node.js example. 
+sometimes will have to change extension to .mjs to show were using something
+
+install npm first then install node from npm. this makes it easy to update it and be sure we have latest version
+--------------------------------------------------------------------------------------------------------------------------------
+NODE DAY 2: 
+
+WE SHOULD HAVE AN NPM PACKAGE AT THE ROOT OF EACH REPO WE HAVE -> this file is called package.json
+
+npm i -g <package> => installs a package globally (g obviously meaning global)
+
+npm init => initializes the npm package and creates package.json
+
+in package.json we dont really need the "main" field in the JSON object. Kinda dont know how this works exactly but for our case we deleted it.
+** Note: JSON cannot have a comma after the last field (if it is strict json). Strict json is used in things like HTTP messages so when 
+were working with requests that involve JSON we must have no trailing commas. Also JSON requires the property names to be in bold. In JS,
+object property names do not need quotes and mostly dont have quotes. **
+    - The script is important to use it we do "npm run <script-name>". the most popular is called start. We can put its value as 
+      "node server/index.mjs" in this case running "npm run start" will start our webserver
+
+Dependencies is another important field in package.json. We can help find versions by doing ctrl+space after we type in the package name.
+
+npm does the same thing as pip. Essentially the package.json is like a venv in the sense that the dependencies decalred within define 
+exactly what packages are used in our project. essentially this replaces the need for a venv to keep track of project specific packages. 
+
+example: say we have a package version 4.21.5 the 4 indicates big new versions changes in this number mean that different rules are being
+introduces that may not be backward compatiable. The 21 is for minor new versions meaning some new things are added or removed but all 
+are still completely backwards compatiable. The 5 is just for bug fixes. 
+
+in the npm dependencies we will either see "4.21.5", "^4.21.5", or "~4.21.5". The first means that version only. The tilde means 4.21 is 
+required but any new bug fixes will automatically be used (locks major and minor versions). The ^ says as long as things are backwards compatiable give me the most uptodate
+version (locks just major version). 
+This is because the dependencies specified here just tell npm where to go and what we need. 
+
+** Once our dependencies have been specified in package.json, we run "npm i" (or "npm install") to download the dependencies.
+We can then run "npm list" to view our dependencies and their versions. 
+
+dev dependencies just stuff we need when actually coding nodemon restarts our server after each edit 
+
+peer dependencies - packages that the human must install themselves npm will not install them automatically 
+
+** run npm i after each time we change package.json 
