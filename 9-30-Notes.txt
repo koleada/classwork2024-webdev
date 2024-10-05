@@ -1,0 +1,30 @@
+Vue is only used in the CLIENT folder!! as far as Vue is concerned the client folder is the root. This is because Vue is a client side 
+framework. 
+
+Server will basically be our node enviorment. However, the node package and stuff is located in the root folder for the server. 
+
+We will use a <RouterLink> tag in place of a <a> tag anytime we are linking to a relavtive path eg one we created in our project.
+
+In our src folder, the assets folder will hold any other files we want to go through the vite processing (eg vite will include it in our 
+site) This is where well put images or other things like that. 
+
+the scoped attribute is used in style tags to make it so those styles only affect that particular page. 
+
+** note we will delete our components in the assignments folder but can refer back to the ones in the classwork folder**
+
+we can define custom things within our components by defineing "prop" (at the top of the component file) and using {{ }} within the html
+tags where we want the property to go. We must reference the property name in the {{ }} tempalte tags to specifify what we want. A good 
+example of this is in the helloworld component.
+
+To delete a component we must also delete the tags that reference it  in any other files. 
+
+****** Views vs. Componenets: components are things that we use in other pages. Views are top level stand alone pages. Componenets are essentially
+peices of these pages that get reused. Otherwise there is no difference between these 2. Must have these correct for final proj ******* 
+
+Vue uses custom tags to use compentents in our views. We can reference TheWelcomeView or just the App.vue along with the helloworld component
+to see this. We can also put other tags within our component tags and the components can actually use the html we supplied. To provide 
+content to a componetn we use <slot></slot> tags. The content we put in the custom component tags in our view will then we displayed in 
+the slot tags. Of course the reverse is true too. We can put components in or views as mentioned earlier.
+
+** ALWAYS CHECK WHAT DIR WERE IN BEFORE ISSUING COMMANDS -- espeically when we want to do stuff for the client folder. We dont want to accidnentlu
+install packages to our server (root) package.json by acciendent.

@@ -1,0 +1,46 @@
+install: npm create vue@latest -> be sure to be in your project directory when you run this. 
+
+Settings we used for this project:  (npm will prompt you for these)
+✔ Project name: … client
+✔ Add TypeScript? …  Yes
+✔ Add JSX Support? …  Yes
+✔ Add Vue Router for Single Page Application development? …  Yes
+✔ Add Pinia for state management? … No 
+✔ Add Vitest for Unit Testing? … No 
+✔ Add an End-to-End Testing Solution? › No
+✔ Add ESLint for code quality? …  Yes
+✔ Add Prettier for code formatting? …  Yes
+✔ Add Vue DevTools 7 extension for debugging? (experimental) …  Yes
+
+Server folder will hold all of our backend code. But we want the npm to think our package.json is in the root. Thus we will have 1 package.json
+in the root as we already did and we will have a separate package.json in the client folder. The client folder will have everything it 
+needs in that folder. Unlike the server because we have the server itself in that server folder and the package.json, modules etc in the root. 
+
+So for our client folder, well install vue using npm within and place the package.json in the client folder. 
+
+Our client folder in the assignments dir is fully set up to work with Vue. 
+
+.vscode folder holds settings as most people use vscode for webdev. In the extensions.json file there are some recommended libs the dev 
+reccomends for us to use. We can do this is in the same exact way too if we create something. 
+
+The public file is anything we want to be on our server even files vue knows nothing about. These could be images, pdfs whatever. 
+
+src is where our application mostly lives
+
+eslint is used to help us make sure the code we create is presentable and up to the standard. It goes through our code and looks for all 
+bad practices that go against the standard. It can also show updates, depreciated functions etc. It also can do formatting but were using 
+prettier so it doesnt matter. Prettier has some defined rules in the .prettierrc.json file. 
+
+When we start a vue project w/ npm, we basically get everything we need to start. Index.html w/ boilerplate, its own package.json etc.
+In package.json npm put in a bunch of useful scripts for us to use. dev used for when were coding. build will type check and build the app
+with Vite. We also have a preview functionality that lets us preview it if we want (but we have that extension already) 
+
+npm run build is good to run when our CICD build fails so we can see the error
+
+** most of the time we will run "npm run dev"
+
+** again to run the scripts we do "npm run <script>" >> must be in the client folder to do this obvisously** But first we need to install 
+all the dependencies (theres a LOT) as mentioned in npm notes we can do this with "npm i"
+
+Vue dev tools look cool. we do npm run dev to open a local sever then we can to shift+alt+d to spin up the dev tools. The local server
+is how we view changes to our app. 
